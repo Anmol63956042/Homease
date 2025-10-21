@@ -42,15 +42,15 @@ const Footer = () => {
           <ul>
             <li className="contact-item">
               <i className="contact-icon phone-icon"></i>
-              +91-8603862290
+              +91-6395604255
             </li>
             <li className="contact-item">
               <i className="contact-icon email-icon"></i>
-              support@homease.com
+              yanmol1813@gmail.com
             </li>
             <li className="contact-item">
               <i className="contact-icon location-icon"></i>
-              123 Service Lane, Bangalore, India
+              Department of Computer Science, AMU, Aligarh, India
             </li>
           </ul>
         </div>
