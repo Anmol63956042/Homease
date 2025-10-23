@@ -94,7 +94,7 @@ const MyOrders = () => {
       console.log("Fetching orders for email:", email);
       setLoading(true);
       setError(null);
-      const response = await axios.get(`http://localhost:4000/api/orders/user/${email}`);
+      const response = await axios.get(`https://homeeeease-backend.onrender.com/api/orders/user/${email}`);
       console.log("Orders fetched:", response.data);
       setOrders(response.data);
       setLoading(false);
@@ -129,7 +129,7 @@ const MyOrders = () => {
         let orderData = null;
         try {
           // First try the individual order endpoint
-          const response = await axios.get(`http://localhost:4000/api/orders/${order._id}`);
+          const response = await axios.get(`https://homeeeease-backend.onrender.com/api/orders/${order._id}`);
           if (response.data) {
             orderData = response.data;
             console.log("Detailed order fetched by ID:", orderData);
@@ -141,7 +141,7 @@ const MyOrders = () => {
         // If that failed, try getting the order tracking information
         if (!orderData && order._id) {
           try {
-            const trackingResponse = await axios.get(`http://localhost:4000/api/orders/${order._id}/tracking`);
+            const trackingResponse = await axios.get(`https://homeeeease-backend.onrender.com/api/orders/${order._id}/tracking`);
             if (trackingResponse.data) {
               orderData = { ...order, ...trackingResponse.data };
               console.log("Order tracking information fetched:", orderData);
