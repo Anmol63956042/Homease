@@ -42,7 +42,7 @@ const PlaceOrder = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/orders/create-order",
+        "https://homeeeease-backend.onrender.com/api/orders/create-order",
         {
           amount: totalAmount,
         }
@@ -62,7 +62,7 @@ const PlaceOrder = () => {
 
           // Store the order in DB after payment success
           const verifyResponse = await axios.post(
-            "http://localhost:4000/api/orders/verify-payment",
+            "https://homeeeease-backend.onrender.com/api/orders/verify-payment",
             {
               orderId: data.id,
               paymentId: response.razorpay_payment_id,
