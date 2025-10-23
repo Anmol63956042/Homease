@@ -7,7 +7,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({}); //manage cart
-  const url = "http://localhost:4000";
+  const url = "https://homeeeease-backend.onrender.com";
   const [token, setToken] = useState("");
   const [service_list, setServiceList] = useState([]);
 
