@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import OrderDetails from "./Pages/OrderDetails/OrderDetails";
 
 const App = () => {
-  const url = "http://localhost:4000";
+  const url = "https://homeeeease-backend.onrender.com";
 
   return (
     <div>
