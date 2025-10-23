@@ -14,7 +14,7 @@ const Orders = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/orders");
+      const response = await axios.get("https://homeeeease-backend.onrender.com/api/orders");
       setOrders(response.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
@@ -24,7 +24,7 @@ const Orders = () => {
   const updateStatus = async (id, newStatus) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/orders/${id}/status`,
+        `https://homeeeease-backend.onrender.com/api/orders/${id}/status`,
         { status: newStatus }
       );
       if (response.status === 200) {
@@ -45,7 +45,7 @@ const Orders = () => {
   const updateTrackingStatus = async (id, trackingStatus) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/orders/${id}/status`,
+        `https://homeeeease-backend.onrender.com/api/orders/${id}/status`,
         { trackingStatus, notes: statusNote || `Order status updated to ${trackingStatus}` }
       );
       if (response.status === 200) {
