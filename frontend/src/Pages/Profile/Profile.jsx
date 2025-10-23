@@ -51,7 +51,7 @@ const Profile = () => {
       const email = localStorage.getItem('userEmail');
       if (!email) return;
 
-      const response = await axios.get(`http://localhost:4000/api/orders/user/${email}`);
+      const response = await axios.get(`https://homeeeease-backend.onrender.com/api/orders/user/${email}`);
       setOrders(response.data);
     } catch (error) {
       console.error('Error fetching orders:', error);
