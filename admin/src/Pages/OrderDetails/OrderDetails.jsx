@@ -12,7 +12,7 @@ const OrderDetails = () => {
     const fetchOrderDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/orders/${orderId}`
+          `https://homeeeease-backend.onrender.com/api/orders/${orderId}`
         );
         setOrder(response.data);
       } catch (error) {
