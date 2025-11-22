@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-contents">
-        <h2>Professional Home Services at Your Fingertips</h2>
+        <h2>Profess Home Services at Your Fingertips</h2>
         <div className="header-divider"></div>
         <p>
           Welcome to Homease, your trusted partner for all home service needs.
